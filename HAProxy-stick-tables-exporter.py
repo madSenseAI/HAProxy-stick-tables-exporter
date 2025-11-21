@@ -335,6 +335,10 @@ class haproxy_Stats(object):
                         )
                     m = p.search(line)
 
+                    # Skip if regex doesn't match the line format
+                    if m is None:
+                        continue
+
                     if m.group('type') is None:
                         continue
                     type_counter = m.group('type')
