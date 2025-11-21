@@ -82,6 +82,16 @@ class haproxyCollector(object):
                     'Haproxy stick table key general purpose counter 0 rate',
                     labels=["table", "key", "period"]),
                     'valuetype': int}
+            metrics['gpc1'] = {'family': GaugeMetricFamily(
+                    'haproxy_stick_table_key_gpc1',
+                    'Haproxy stick table key general purpose counter 1',
+                    labels=["table", "key"]),
+                    'valuetype': int}
+            metrics['gpc1_rate'] = {'family': GaugeMetricFamily(
+                    'haproxy_stick_table_key_gpc1_rate',
+                    'Haproxy stick table key general purpose counter 1 rate',
+                    labels=["table", "key", "period"]),
+                    'valuetype': int}
             metrics['conn_cnt'] = {'family': CounterMetricFamily(
                     'haproxy_stick_table_key_conn_total',
                     'Haproxy stick table key connection counter',

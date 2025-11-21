@@ -2,7 +2,7 @@
 
 source ../activate.sh
 
-TAG="v2"
+TAG="v3"
 
 # 1. Vars
 REGISTRY=ms-docker-registry
